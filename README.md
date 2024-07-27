@@ -1,2 +1,15 @@
 # IOT-ENABLED-SMART-DOOR-LOCK-SYSTEM-WITH-BIOMETRIC-AUTHENTICATION-AND-CAMERA-INTEGRATION
-This project utilizes ESP32CAM module, Arduino nano, AS608 optical fingerprint sensor modules for the smart door lock system.
+This project utilizes ESP32CAM module, Arduino nano, AS608 optical fingerprint sensor module, 12V Relay module, SSD1306 oled display, a solenoid lock for the smart door lock system.
+
+# WORKING-PRINCIPLE
+The main idea of this project is that first the user fingerprints, i.e, the persons who will be allowed to access to the door, their fingerprints will first be enrolled on the AS6008 sensor. It can hold more than a 100 prints. After that the fingerprint sensor is connected to the arduino nano. The nano also controls a 12v relay module, that turn on or off the solenoid door lock. The nano also has a data line connected with the esp32cam module for signal purpose.
+So when a person places their finger on the sensor, it will check and if match, the buzzer will beep a few times, the lock will open and it will generate a signal by making a digital pin high on tha nano. This digital pin is connected with a gpio pin on esp32cam. When the esp32cam receives the signal, it will capture an image and send it over to the registered telegram account. If the fingerprint does not match, then the buzzer will do a continous beep, lock will not open but the nano will still generate a signal and send to the esp32cam and the cam will take a picture and send it to telegram. This is done so that the manager can keep a track of how many person and have tried to enter through the door and how many have actually entered.
+
+# IMPORTANT NOTES:
+Step 1: Enrol the users fingerprints on the AS608 sensor. The provided code is supplied in the folder fingerprint_enrollment. If you have a trouble to follow the process, here is an example https://randomnerdtutorials.com/fingerprint-sensor-module-with-arduino/. Follow the instructions on the website. ALTHOUGH THE SENSORS ARE DIFFERENT ON THE WEBSITE, PROCESS IS SAME.
+Step 2: Then connect the sensor to  the nano and the required parts according to the given circuit diagram and upload the code to the nano. Make sure that the libraries required are installed. 
+Step 3: Then create a telegram account and then https://randomnerdtutorials.com/telegram-esp32-cam-photo-arduino/ go to this website and do everything the website tells to do upto Arduino Json library. Do not follow the code part as I have modified the code for this project and the original code will not work.
+Step 4: After that open the folder telegram send where you will find the code for cam module. In the code, enter the bot token, wifi credentials, telegram user id and make sure to install the required libraries and then upload. 
+Step 5: Then connect everything according to circuit diagram and it will work fine.
+
+# NOTE: IF YOU ENCOUNTER PROBLEMS WHILE UPLOADING OR COMPILING, COPY THE ERROR CODE OR ERROR AND YOU CAN USE AI OR SEARCH ON GOOGLE OR YOUTUBE FOR THE ERROR. THE ERRORS I FACED WHILE DOING THIS PROJECT WERE A LOT AND THERE WERE MANY TRIALS, BUT ONE THING I LEARNED THAT THE ERRORS THAT I RECEIVED WERE NOT NEW AND SOMEONE ON THE PLANE THAVE FACED THE ERROR AND HAVE EITHER SOLVED IT OR HAVE TALKED ABOUT IT ONLINE. SO SEARCH ABOUT IT AND MAYBE YOU WILL BE SUCCESSFULL.
