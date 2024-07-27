@@ -11,5 +11,5 @@ Step 2: Then connect the sensor to  the nano and the required parts according to
 Step 3: Then create a telegram account and then https://randomnerdtutorials.com/telegram-esp32-cam-photo-arduino/ go to this website and do everything the website tells to do upto Arduino Json library. Do not follow the code part as I have modified the code for this project and the original code will not work.
 Step 4: After that open the folder telegram send where you will find the code for cam module. In the code, enter the bot token, wifi credentials, telegram user id and make sure to install the required libraries and then upload. 
 Step 5: Then connect everything according to circuit diagram and it will work fine.
-
+ 
 # NOTE: IF YOU ENCOUNTER PROBLEMS WHILE UPLOADING OR COMPILING, COPY THE ERROR CODE OR ERROR AND YOU CAN USE AI OR SEARCH ON GOOGLE OR YOUTUBE FOR THE ERROR. THE ERRORS I FACED WHILE DOING THIS PROJECT WERE A LOT AND THERE WERE MANY TRIALS, BUT ONE THING I LEARNED THAT THE ERRORS THAT I RECEIVED WERE NOT NEW AND SOMEONE ON THE PLANE THAVE FACED THE ERROR AND HAVE EITHER SOLVED IT OR HAVE TALKED ABOUT IT ONLINE. SO SEARCH ABOUT IT AND MAYBE YOU WILL BE SUCCESSFULL.
