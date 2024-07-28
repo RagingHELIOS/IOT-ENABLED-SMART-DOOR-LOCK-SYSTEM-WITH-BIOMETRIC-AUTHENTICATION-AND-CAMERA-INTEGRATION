@@ -7,13 +7,13 @@
 #include <UniversalTelegramBot.h>
 #include <ArduinoJson.h>
 
-const char* ssid = "Archer_2.4Ghz";
-const char* password = "q1w2e3r4t5y6u7i8o9p0";
+const char* ssid = "*****************";
+const char* password = "**********************";
 
 // Initialize Telegram BOT
-String BOTtoken = "7098484190:AAF7zME4YPL7PSyxn0xaoFGymkl82URDzFM";  // Bot Token (from Botfather)
+String BOTtoken = "********************************************";  // Bot Token (from Botfather)
 
-String CHAT_ID = "1489347862";  // chat ID from IDBot
+String CHAT_ID = "******************";  // chat ID from IDBot
 
 bool sendPhoto = false;
 
